@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-// Student class
+
 class Student {
     private String name;
     private int roll;
@@ -51,13 +51,13 @@ class Student {
     }
 }
 
-// ResultSystem class
+
 class ResultSystem {
     private List<Student> students = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
 
     public ResultSystem() {
-        loadFromFile(); // Load existing students from file on startup
+        loadFromFile(); 
     }
 
     public void menu() {
@@ -81,7 +81,7 @@ class ResultSystem {
 
     private void addStudent() {
         System.out.print("Enter student name: ");
-        sc.nextLine(); // consume newline
+        sc.nextLine(); 
         String name = sc.nextLine();
         System.out.print("Enter roll number: ");
         int roll = sc.nextInt();
@@ -94,7 +94,7 @@ class ResultSystem {
         Student s = new Student(name, roll, marks);
         students.add(s);
         System.out.println("Student added successfully!");
-        saveToFile(); // Save after adding
+        saveToFile(); 
     }
 
     private void displayStudents() {
@@ -137,7 +137,7 @@ class ResultSystem {
     }
 }
 
-// Main class
+
 public class Main {
     public static void main(String[] args) {
         ResultSystem rs = new ResultSystem();
